@@ -121,7 +121,7 @@ var randomColor = (function(){
     
         // X axis
         x.domain(data.map(function(d) { return d.name; }))
-        xAxis.transition().duration(1000).call(d3.axisBottom(x))
+        xAxis.transition().duration(1000).call(d3.axisBottom(x).tickValues([]));
     
         // Add Y axis
         y.domain([0, d3.max(data, function(d) { return +d[selectedVar] }) ]);
